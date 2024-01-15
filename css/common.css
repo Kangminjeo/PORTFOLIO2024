@@ -1,0 +1,21 @@
+@charset "utf-8";
+*{
+    margin: 0; padding: 0; box-sizing: border-box; font : inherit; color: inherit;
+}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+html{font-size: 10px;}
+body{font-size: 1.6rem; color: #222;}
+/* custom  */
+.inner{
+    margin: 0 auto; padding: 0 20px; width: 100%; position: relative; max-width: 1440px;
+}
+@media screen and (max-width: 1200px){
+    html{font-size: 9px;}
+}
+@media screen and (max-width: 1024px){
+    html{font-size: 8px;}
+}
+@media screen and (max-width: 768px){
+    
+}

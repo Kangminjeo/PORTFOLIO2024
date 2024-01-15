@@ -1,0 +1,20 @@
+swiper cdn : 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+swiper demos : https://swiperjs.com/demos
+
+fontawsome cdn : 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+아이콘 찾기 : https://fontawesome.com/icons
+
+html5shiv.js : HTML5의 새로운 요소를 지원해주지 못하는 브라우저나 구 버전의 익스플로러가 HTML5 요소를 지원해주는 역할
+HTML5에 추가된 header, section, article, footer, nav, aside, figure, figcaption, main, content 등의 요소를 구 버전의 익스플로러(ie6~8)은 inline요소(한 줄로 나열)로 인식하기 때문에 레이아웃 작업에 문제가 되는데 이를 예방하게된다. 
+
+prefixfree.min.js : css 작성하다 보면 크롬에서는 잘 작동되는데 다른 브라우저에서는 안되는 경우가 있다
+예를들어서 transform 을 사용했을때 타 브라우저에서 안되는 경우에 -webkit-transform , -moz-transform , -o-transform , -ms-transform, transform 이런식으로 각 브라우저별로 접두사를 사용해야하는데 prefixfree.min.js 를 이용하면 접두사 사용을 하지 않아도 된다.
+
+head 에 css/script 파일 로드하는 순서
+- html5shiv , prefixfree.js 
+- 라이브러리 cdn 불러오기 
+- 직접 작성한 파일들 불러오기
+
