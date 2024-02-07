@@ -1,0 +1,108 @@
+{
+    "work" : [
+        {
+            "catename" : "motion",
+            "list":[
+                {   
+                    "videoid": "u9eehcAHhi8",
+                    "alt":"VIDEO THUMB",
+                    "title":"motion graphics1",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "videoid": "QSwt-YeyPMc",
+                    "alt":"VIDEO THUMB",
+                    "title":"motion graphics2",
+                    "period":"1week",
+                    "photoshop" : "used",
+                    "illust" : "used"
+                },
+                {
+                    "videoid": "u9eehcAHhi8",
+                    "alt":"VIDEO THUMB",
+                    "title":"motion graphics3",
+                    "period":"1week",
+                    "html" : "used",
+                    "css" : "used",
+                    "git" : "used"
+                },
+                {
+                    "videoid": "SyC1TAlTbiY",
+                    "alt":"VIDEO THUMB",
+                    "title":"motion graphics2",
+                    "period":"1week",
+                    "photoshop" : "used",
+                    "illust" : "used"
+                }
+            ]
+        },
+        {
+            "catename" : "TYPOGRAPHY",
+            "list":[
+                {
+                    "videoid": "e4933m5hbhs",
+                    "alt":"WEB THUMB",
+                    "title":"Typography1",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "videoid": "6OW5Fb9Nq6Y",
+                    "alt":"WEB THUMB",
+                    "title":"Typography2",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "videoid": "u8PJWE3Tfyg",
+                    "alt":"WEB THUMB",
+                    "title":"Typography4",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                }
+            ]
+        },
+        {
+            "catename" : "POSTER",
+            "list":[
+                {
+                    "imgurl": "design1.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER1",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "imgurl": "design2.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER2",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "imgurl": "design3.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER3",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                },
+                {
+                    "imgurl": "design4.jpg",
+                    "alt":"WEB THUMB",
+                    "title":"MOVING POSTER4",
+                    "period":"1week",
+                    "afterEffect" : "used",
+                    "premiere" : "used"
+                }
+            ]
+        }
+    ]
+}

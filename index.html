@@ -3,24 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제목</title>
-
+    <title>minjeong's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/html5shiv.js"></script>
-    <script src="js/prefixfree.min.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/index.js"></script>
+    
+
+
 </head>
 <body>
     <header class="header">
-
+        <div class="inner">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo-light.svg" alt="">
+                    <img src="img/logo-dark.svg" alt="">
+                </a>
+            </div>
+            <ul>
+                <li class="active"><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
     </header>
-    <section class="main-visual">
+    <section class="home" id="home">
+        <div class="inner">
+            <h1 data-aos="fade-right" data-aos-duration="2000">Min Jeong's</h1>
+            <h2>PORTFOLIO</h2>
+            <div class="line"></div>
+        </div>
+    </section>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="inner">
+            <div class="about-left">
+                <img src="img/My photo.jpg" alt="내사진">
+            </div>
+            <div class="about-right">
+                <div class="about-text">
+                    <p>안녕하세요<br>
+                        예비 영상제작자 강민정입니다!<br>
+                        다양한 작품을 통해 스토리텔링에 도전하며 나만의 시그니처를 찾고, 세계적으로 인정받는 작품을 통해 긍정적인 영감을 전하고자 합니다.<br>
+                        협업과 다양한 프로젝트를 통해 세계의 이야기를 창조하고 함께 나아가는 여정을 즐깁니다.<br>
+                        함께해 주셔서 감사합니다! <br>
+                        앞으로의 흥미진진한 여정을 기대합니다.
+                    </p>
+                </div>
+                <div class="about-btm">
+                    <div class="left">
+                        <h2>Education</h2>
+                        <ul>
+                            <li>
+                                <span>2025.02</span>
+                                <p>계명대학교 국제통상학 졸업</p>
+                            </li>
+                            <li>
+                                <span>2024.04</span>
+                                <p>그린컴퓨터디자인학원<br>
+                                    멀티미디어 영상편집 과정 수료</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <h2>License</h2>
+                            <ul>
+                                <li>
+                                    <span>2025.02</span>
+                                    <p>QTG 포토샵 1급</p>
+                                </li>
+                                <li>
+                                    <span>2025.05</span>
+                                    <p>QTG 일러스트 1급</p>
+                                </li>
+                                <li>
+                                    <span>2024.08</span>
+                                    <p>컴퓨터그래픽스</p>
+                                </li>
+                                <li>
+                                    <span>2025.02</span>
+                                    <p>자격증자격증 1급</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btm">
+                            <h2>Skill</h2>
+                            <div class="line"></div>
+                            <ul>
+                                <li>
+                                    <img src="img/round_after_effects.png" alt="에펙 이미지">
+                                </li>
+                                <li>
+                                    <img src="img/round_premiere.png" alt="프리미어 이미지">
+                                </li>
+                                <li>
+                                    <img src="img/round_illust.png" alt="일러스트 이미지">
+                                </li>
+                                <li>
+                                    <img src="img/round_photoshop.png" alt="포토샵 이미지">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About 끝 -->
+
+    <!-- Portfolio 시작 -->
+    <section class="portfolio" id="portfolio">
+        <div class="inner">
+            <ul class="tab-list">
+                <!-- json연동 -->
+                <!-- 
+                    <li class="active"><a href="javascript:;">motion</a></li>
+                -->
+            </ul>
+            <div class="tab-content">
+                <div class="swiper sw-work">
+                    <ul class="swiper-wrapper">
+                        
+                    </ul>
+                </div>
+            </div>
+          
+
+        </div>
 
     </section>
-    <footer class="footer">
-        
+    <div class="modal">
+        <div class="modal-cont">
+            
+        </div>
+    </div>
+    <!-- Portfolio 끝 -->
+
+    <!-- Contact 시작 -->
+    <section class="contact" id="contact">
+        <div class="inner">
+            <div class="text">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contact-btm">
+                <ul class="button">
+                    <li class="mail-btn">
+                        <a href="javascript:;">
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://blog.naver.com/#" target="_blank">
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.kakao.com/me/#" target="_blank">
+                            Kakaotalk
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-view">
+                <form action="https://formsubmit.co/kmj9043@gmail.com" method="POST" target="_blank" class="mail-form">
+                    <input type="hidden" name="_captcha" value="false" alt="로봇인가 확인하는거">
+                    <input type="hidden" name="_subject" value="포트폴리오 연락">
+                    <p><i class="fa fa-user"></i> Name </p>
+                    <input type="text" placeholder="성함*" name="name" required class="input">
+                    <p><i class="fa-solid fa-envelope"></i> Email Address </p>
+                    <input type="email" name="email" placeholder="이메일*" required class="input">
+                    <p><i class="fa fa-pencil"></i> Message </p>
+                    <textarea name="message" placeholder="메세지*"></textarea>
+                    <input type="hidden" name="_next" value="https://Kangminjeo.github.io/portforio/thanks.html" alt="메일전송 후 메시지로이동">
+                    <div class="btn-wrap">
+                        <div type="cancel" class="btn-x">Cancel</div>
+                        <button type="submit" class="btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact 끝 -->
+
+    <footer class="footer" id="footer">
+        <div class="inner"></div>
     </footer>
 </body>
 </html>
+<script>
+    AOS.init();
+  </script>

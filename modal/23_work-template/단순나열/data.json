@@ -1,0 +1,51 @@
+{
+    "work":[
+        {
+            "videoid": "xWUeEfP70f8",
+            "title": "IU-LILAC TYPOGRAPHY",
+            "desc" : "IU-LILAC TYPOGRAPHY (모작) 입니다.",
+            "contribution" : "100%",
+            "period": "23.11.01~23.11.20",
+            "afterEffect" : "used",
+            "premiere" : "used",
+            "photoshop" : "used",
+            "illust" : "used"
+        },
+        {
+            "videoid": "QSwt-YeyPMc",
+            "title": "IU-LILAC TYPOGRAPHY",
+            "desc" : "IU-LILAC TYPOGRAPHY (모작) 입니다.",
+            "contribution" : "100%",
+            "period": "23.11.01~23.11.20",
+            "afterEffect" : "used",
+            "illust" : "used",
+            "html" : "used",
+            "css" : "used",
+            "git" : "used"
+        },
+        {
+            "videoid": "u9eehcAHhi8",
+            "title": "IU-LILAC TYPOGRAPHY",
+            "desc" : "IU-LILAC TYPOGRAPHY (모작) 입니다.",
+            "contribution" : "100%",
+            "period": "23.11.01~23.11.20",
+            "afterEffect" : "used",
+            "premiere" : "used",
+            "photoshop" : "used",
+            "illust" : "used",
+            "git" : "used"
+        },
+        {
+            "videoid": "SyC1TAlTbiY",
+            "title": "IU-LILAC TYPOGRAPHY",
+            "desc" : "IU-LILAC TYPOGRAPHY (모작) 입니다.",
+            "contribution" : "100%",
+            "period": "23.11.01~23.11.20",
+            "afterEffect" : "used",
+            "premiere" : "used",
+            "photoshop" : "used",
+            "illust" : "used",
+            "git" : "used"
+        }
+    ]
+}

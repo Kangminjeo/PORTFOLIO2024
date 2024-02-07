@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="work">
+        <div class="inner">
+            <ul class="work-list">
+                <!-- <li class="work-item">
+                    <div class="thumb-img">
+                        <img src="https://img.youtube.com/vi/u9eehcAHhi8/maxresdefault.jpg" alt="썸네일이미지">    
+                    </div>
+                    <div class="info-text">
+                        <h1>IU-LILAC TYPOGRAPHY</h1>
+                        <h2>IU-LILAC TYPOGRAPHY (모작) 입니다.</h2>
+                        <h3>기여도100%</h3>
+                        <h4>작업기간 : 2023.11.01-2022.12.01</h4>
+                        <div class="tools">
+                            <p>사용툴</p>
+                            <ul>
+                                <li><img src="../img/folder_after_effects.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+    <div class="modal">
+        <div class="modal-cont"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    let workWrap = document.querySelector(".work-list")
+    let modal = document.querySelector(".modal")
+    let modalCont = document.querySelector(".modal-cont")
+    let body = document.querySelector("body")
+
+    let workData;
+    const eventXhttp = new XMLHttpRequest();
+    eventXhttp.open("GET", "data.json");
+    eventXhttp.send();
+    eventXhttp.onreadystatechange = function(event){
+        const req = event.target;
+        if(req.readyState === XMLHttpRequest.DONE){
+            workData = JSON.parse(req.response);
+            workSection()
+        }
+    }
+    function workSection(){
+        let workListHtml = ``
+        for(let i = 0; i < workData.work.length; i++){
+            let obj = workData.work[i];
+            let temp = `
+                <li class="work-item">
+                    <div class="thumb-img">
+                        <img src="https://img.youtube.com/vi/${obj.videoid}/maxresdefault.jpg" alt="썸네일이미지">    
+                    </div>
+                    <div class="info-text">
+                        <h1>${obj.title}</h1>
+                        <h2>${obj.desc}</h2>
+                        <h3>기여도 ${obj.contribution}</h3>
+                        <h4>작업기간 :${obj.period}</h4>
+                        <div class="tools">
+                            <p>사용툴</p>
+                            <ul class="skill-wrap">
+                                <li ${obj.afterEffect ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_after_effects.svg" alt="">
+                                </li>
+                                <li ${obj.premiere ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_premiere.svg" alt="">
+                                </li>
+                                <li ${obj.css ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_css.svg" alt="">
+                                </li>
+                                <li ${obj.html ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_html.svg" alt="">
+                                </li>
+                                <li ${obj.illust ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_illust.svg" alt="">
+                                </li>
+                                <li ${obj.photoshop ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_photoshop.svg" alt="">
+                                </li>
+                                <li ${obj.git ? "style='display:block'" : "style='display:none'"}>
+                                    <img src="../img/folder_git.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            `
+            workListHtml += temp;
+        }
+        workWrap.innerHTML = workListHtml
+
+        // 썸네일 클릭 > 모달 오픈
+        let workItem = document.querySelectorAll(".work-list li.work-item")
+        workItem.forEach(function(item, index){
+            item.addEventListener("click", function(){
+                let obj = workData.work[index];
+                modal.classList.add("active")
+                modalCont.innerHTML = `<iframe src="https://www.youtube.com/embed/${obj.videoid}?autoplay=1&mute=1" allowfullscreen></iframe>`
+                setTimeout(function(){
+                    modalCont.classList.add("active")
+                },500)
+                body.classList.add("scrollfix")
+            })
+        })
+        modal.addEventListener("click", function(){
+            modal.classList.remove("active")
+            modalCont.classList.remove("active")
+            body.classList.remove("scrollfix")
+            modalCont.innerHTML = ``
+        })
+    }
+</script>

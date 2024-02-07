@@ -1,0 +1,471 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 111;
+}
+
+.header .inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.header .inner .logo{
+    height: 6rem;
+}
+.header .inner .logo a{
+    display: block;
+    height: 100%;
+}
+.header .inner .logo a img{
+    height: 100%;
+}
+.header .inner .logo a img:nth-child(1){display: block;}
+.header .inner .logo a img:nth-child(2){display: none;}
+.header.active{
+    color: #000;
+}
+.header.active .inner .logo a img:nth-child(1){display: none;}
+.header.active .inner .logo a img:nth-child(2){display: block;}
+.header ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+
+}
+.header ul li{}
+.header ul li.active{
+    border-bottom: 2px solid #ffffff;
+}
+@media screen and (max-width: 768px){
+    
+}
+/* HOME 시작 */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0c0c0c;
+}
+.home .inner{}
+.home .inner h1{
+    font-size: 12vw;
+    text-align: left;
+    position: relative;
+}
+.home .inner h2{
+    font-size: 12vw;
+    text-align: right;
+    position: relative;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 14rem;
+}
+/* HOME 반응형 */
+@media screen and (max-width: 1600px){
+    
+}
+@media screen and (max-width: 1024px){
+    html{font-size: 8px;}
+}
+@media screen and (max-width: 768px){
+    .inner{padding: 0 20px;}
+}
+/* HOME 반응형끝 */
+/* HOME 끝 */
+
+
+/* ABOUT 시작 */
+.about{
+    background-color: #ffffff;
+    padding: 15rem 0;
+    color: #000000;
+}
+.about .inner{
+    display: flex;
+    /* align-items: center; */
+    /* margin: 12rem 0 8rem ; */
+    justify-content: space-between;
+}
+.about .about-left{
+    font-size: 0;
+    width: 35%;
+}
+.about .about-left img{
+    width: 100%;
+}
+.about .about-right{
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about .about-right .about-text{
+    /* font-family: "pretendard", sans-serif; */
+}
+.about .about-right .about-text p{
+    font-size: 2rem;
+    line-height: 1.8;
+}
+.about .about-right .about-btm{
+    display: flex;
+    justify-content: space-between;
+}
+.about .about-right .about-btm .left{
+    width: 45%;
+}
+.about .about-right .about-btm .left h2{
+    font-size: 2.2rem;
+    font-family: "aria-text-g2", sans-serif;
+    border-bottom: 1px solid #000000;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+.about .about-right .about-btm .left ul{}
+.about .about-right .about-btm .left ul li{
+    display: flex;
+    font-size: 2rem;
+    line-height: 1.6;
+}
+.about .about-right .about-btm .left ul li span{
+    width: 10rem;
+    display: inline-block;
+}
+.about .about-right .about-btm .left ul li p{
+    
+}
+.about .about-right .about-btm .right{
+    width: 45%;
+}
+.about .about-right .about-btm .right .top{
+    /* margin-top: 3rem;
+    padding: 4rem 0; */
+}
+.about .about-right .about-btm .right .top h2{
+    font-family: "aria-text-g2", sans-serif;
+    font-size: 2.2rem;
+    border-bottom: 1px solid #000000;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+.about .about-right .about-btm .right .top ul{}
+.about .about-right .about-btm .right .top ul li{
+    display: flex;
+    font-size: 2rem;
+    line-height: 1.6;
+}
+.about .about-right .about-btm .right .top ul li span{
+    width: 10rem;
+    display: inline-block;
+}
+.about .about-right .about-btm .right .top ul li p{}
+.about .about-right .about-btm .right .btm{margin-top: 2rem;}
+.about .about-right .about-btm .right .btm h2{
+    margin-bottom: 2rem;
+    font-family: "aria-text-g2", sans-serif;
+    font-size: 2.2rem;
+    border-bottom: 1px solid #000000;
+    padding: 1rem 0;
+}
+.about .about-right .about-btm .right .btm ul{
+    gap: 10px;
+    display: flex;
+}
+.about .about-right .about-btm .right .btm ul li{
+    height: 5rem;
+    margin-top: 1rem;
+}
+.about .about-right .about-btm .right .btm ul li img{
+    height: 100%;
+}
+@media screen and (max-width: 1500px){
+    
+}
+@media screen and (max-width: 1024px){
+    html{font-size: 8px;}
+}
+@media screen and (max-width: 768px){
+    .inner{padding: 0 20px;}
+}
+/* About 끝 */
+
+/* Portfolio 시작 */
+.portfolio{
+    padding: 15rem 0;
+}
+.tab-list{
+    display: flex; justify-content: center; gap: 10px; margin-bottom: 95px;
+} 
+.tab-list li{
+    padding: 0 20px; 
+    border: 2px solid #fff; 
+    height: 40px;
+    display: flex; 
+    align-items: center; 
+    border-radius: 30px;
+    cursor: pointer;
+    /* font-family: "Pretendard Variable";  */
+    /* * font-weight: 200;  */
+    font-size: 1.5em; 
+    
+    font-style: normal;
+}
+.tab-list li.active{
+    background-color: #fff; color: #000;
+    /* font-family: "Pretendard Variable";  */
+    font-weight: 400; 
+    font-style: normal;
+}
+.tab-content{
+    position: relative; 
+    margin-bottom: 20px;
+}
+.tab-content ul li{
+    cursor: pointer;
+}
+.tab-content ul li .left-cont{
+    position: relative; 
+    width: 49%; 
+    text-align: right;
+}
+.tab-content ul li .imgbox{
+    width: 100%; 
+    position: relative;}
+.tab-content ul li .imgbox::after{
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+}
+.tab-content ul li .imgbox img{
+    width: 100%; height: 100%; 
+    position: absolute; 
+    top: 0; 
+    object-fit: cover; 
+    left: 0;
+}
+.tab-content ul li{
+    display: flex;
+    justify-content: space-between;
+}
+.tab-content ul li .txtbox{
+    width: 49%;
+}
+.tab-content ul li .txtbox h1{
+   margin-bottom: 5rem;
+   font-size: 2.8rem;
+   color: #fff;
+}
+.tab-content ul li .txtbox h2{
+   margin-bottom: 5rem;
+   font-size: 2.2rem;
+
+}
+.tab-content ul li .txtbox p{
+   margin-bottom: 50px;
+   
+}
+.tab-content ul li .txtbox p span{
+    display: inline-block;
+    margin-top: 20px; 
+}
+   
+.tab-content ul li .txtbox .skills h3{
+    font-weight: 400; 
+    margin-bottom: 20px;
+    
+}
+.tab-content ul li .txtbox .skills ul{
+    display: flex; 
+    gap: 10px;
+}
+.tab-content ul li .txtbox .skills ul li{height: 50px;}
+.tab-content ul li .txtbox .skills ul li img{height: 100%;}
+.tab-content ul li .txtbox .work-view{
+    border-radius: 100px; display: flex; width: 15rem; height: 4rem; border: 1px solid #fff; justify-content: center; align-items: center; transition: 0.3s; margin-top: 3rem;
+}
+.tab-content ul li .txtbox .work-view:hover{background-color: #fff; color: #000;}
+.tab-content ul li .modal-view{display: none;}
+
+/* modal 영역 */
+.modal{
+    position: fixed; 
+    background-color: rgba(0,0,0,.5); 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%; height: 0; 
+    overflow: hidden; 
+    transition: 0.5s; 
+    z-index: 11;
+}
+.modal.active{height: 100%;}
+.modal .modal-cont{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 100%; 
+    transform: scale(0); 
+    transition: 0.5s;}
+.modal .modal-cont.active{
+    transform: scale(1);
+}
+/* 영상모달 */
+.modal .view-player{
+    width: 90%; 
+    position: relative;
+}
+.modal .view-player::after{
+    content: ""; 
+    padding-bottom: 56.25%; 
+    display: block;
+}
+.modal .view-player iframe{
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    border: none;}
+/* 디자인모달 */
+.modal .view-img{
+    width: 90%; 
+    max-height: 90%; 
+    overflow-y: scroll; 
+    font-size: 0; 
+    padding-right: 10px;
+}
+.modal .view-img img{width: 100%;}
+.modal .view-img::-webkit-scrollbar {width: 10px;}
+.modal .view-img::-webkit-scrollbar-thumb {
+    background: #ffa600; 
+    border-radius: 10px;}
+.modal .view-img::-webkit-scrollbar-track {
+    background: #fff; 
+    border-radius: 10px;}
+@media screen and (max-width: 768px){
+    .tab-content ul li{
+        flex-direction: column;
+    }
+    .tab-content ul li .left-cont{width: 100%; margin-bottom: 30px;}
+    .tab-content ul li .txtbox{width: 100%;}
+}
+
+/* Portfolio 끝 */
+
+/* Comtact 시작 */
+.contact{
+    background-color: #000000;
+    padding: 15rem 0;
+}
+.contact .inner{}
+.contact .inner .text{
+    margin-top: 20rem;
+}
+.contact .inner .text h2{
+    font-size: 14vw;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+.contact .inner .contact-btm{
+    margin: 8rem;
+}
+.contact .inner .contact-btm ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+.contact .inner .contact-btm ul li{
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 2rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.contact .inner .contact-btm ul li:hover{
+    background-color: #fff; color: #000;
+    font-weight: 400; 
+}
+/* Contact 끝 */
+
+/* 이메일 폼 양식 */
+.form-view{
+    width: 100%; 
+    margin-top: 50px; 
+    overflow: hidden; 
+    padding-bottom: 0;
+    height: 0; 
+    transition: 0.5s;
+}
+.form-view.show {
+    height: 560px;
+}
+.mail-form{
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+.mail-form p{
+    margin-left: 1.5rem;
+}
+.mail-form input,
+.mail-form textarea{
+    width: 100%;
+    height: 5rem;margin: 10px 0 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 0 10px;
+    resize: none;
+    color: #000;
+}
+.mail-form textarea{
+    height: 20rem;
+    padding: 10px;
+}
+.mail-form .btn-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.mail-form .btn-x{
+    width: 25%;
+    height: 4rem;
+    border: none;
+    background-color: #B1ABAB;    
+    border-radius: 9px;
+    color: #fff;
+    cursor: pointer;
+}
+.mail-form .btn{
+    width: 73%;
+    height: 4rem;
+    border: none;
+    background-color: #B1ABAB;    
+    border-radius: 9px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.success-mail{
+    border: 1px solid #F05A23;
+    display: inline-block;
+    padding: 4rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+}
+.success-mail a{
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 10px 20px;
+    border: 2px solid #8b1414;
+    border-radius: 50px;
+    color: #8b1414;    
+}

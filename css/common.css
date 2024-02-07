@@ -1,14 +1,15 @@
 @charset "utf-8";
+@import url("https://use.typekit.net/xat6qrx.css");
 *{
     margin: 0; padding: 0; box-sizing: border-box; font : inherit; color: inherit;
 }
 a{text-decoration: none;}
 ul,ol{list-style: none;}
 html{font-size: 10px;}
-body{font-size: 1.6rem; color: #222;}
+body{font-size: 1.6rem; color: #fff; background-color: #0c0c0c}
 /* custom  */
 .inner{
-    margin: 0 auto; padding: 0 20px; width: 100%; position: relative; max-width: 1440px;
+    margin: 0 auto; padding: 0 40px; width: 100%; position: relative; font-family: "aria-text-g2", sans-serif;
 }
 @media screen and (max-width: 1200px){
     html{font-size: 9px;}
@@ -17,5 +18,5 @@ body{font-size: 1.6rem; color: #222;}
     html{font-size: 8px;}
 }
 @media screen and (max-width: 768px){
-    
+    .inner{padding: 0 20px;}
 }

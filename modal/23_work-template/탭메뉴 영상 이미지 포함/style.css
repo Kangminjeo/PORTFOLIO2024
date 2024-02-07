@@ -1,0 +1,50 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font: inherit; color: inherit;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+body{color: #000; font-size: 1.6rem;}
+html{scroll-behavior: smooth; font-size: 10px;}
+body.scrollfix{overflow-y: hidden;}
+.work{padding: 15rem 0;}
+/* 슬라이드 탭 */
+.tab-list{
+    display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap;
+}
+.tab-list li a{
+    padding: 0 20px; border: 1px solid rgba(0,0,0,.1); display: flex; align-items: center; height: 45px; border-radius: 30px; font-size: 1.4rem;
+}
+.tab-list li.active a{
+    background-color: #000; color: #fff;
+}
+/* 슬라이드영역 */
+.slide-wrap{
+    position: relative; margin-bottom: 20px; height: auto;
+}
+.slide-wrap ul li{
+    height: auto; font-size: 1.5rem;
+}
+.slide-wrap ul li .imgbox{
+    position: relative; width: 100%; padding-bottom: 60%;
+}
+.slide-wrap ul li .imgbox img{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0;  object-fit: cover;
+}
+.work .slide-wrap ul li .txtbox{
+    text-align: center; 
+}
+.work .slide-wrap ul li .txtbox p.title{
+    margin-bottom: 5px; display: -webkit-box; overflow: hidden; word-break: break-all; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.modal{
+    position: fixed; background-color: rgba(0,0,0,.5); top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 0; overflow: hidden; transition: 0.5s; z-index: 11;
+}
+.modal.active{height: 100%;}
+.modal .modal-cont{display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; transform: scale(0); transition: 0.5s;}
+.modal .modal-cont.active{transform: scale(1);}
+.modal .view-player{width: 95%; max-width: 1600px; position: relative;}
+.modal .view-player::after{content: ""; padding-bottom: 56.25%; display: block;}
+.modal .view-player iframe{position: absolute; width: 100%; height: 100%; border: none;}
+.modal .view-img{width: 90%; max-width: 95%; max-height: 90%; overflow-y: scroll; font-size: 0; padding-right: 10px;}
+.modal .view-img img{width: 100%;}
+.modal .view-img::-webkit-scrollbar {width: 10px;}
+.modal .view-img::-webkit-scrollbar-thumb {background: coral; border-radius: 10px;}
+.modal .view-img::-webkit-scrollbar-track {background: #fff; border-radius: 10px;}

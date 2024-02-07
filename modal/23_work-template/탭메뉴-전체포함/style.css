@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font: inherit; color: inherit;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+body{color: #000; font-size: 1.6rem;}
+html{scroll-behavior: smooth; font-size: 10px;}
+
+body.scrollfix{overflow-y: hidden;}
+.blank{height: 100vh;}
+.inner{max-width: 1340px; margin: 0 auto; padding: 0 20px;}
+
+/*  */
+
+body.scrollfix{overflow-y: hidden;}
+.work{padding: 15rem 0;}
+/* work-tab */
+.tab-list{display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;}
+.tab-list li{padding: 0 20px; border: 1px solid coral; height: 45px; display: flex; align-items: center; border-radius: 30px; cursor: pointer;}
+.tab-list li.active{background-color: coral; border-color: coral; color: #fff;}
+/* work-cont */
+.tab-content{position: relative; margin-bottom: 20px;}
+.tab-content .work-btn{position: absolute; top: 50%; transform: translateY(-50%); z-index: 111; font-size: 50px;}
+.tab-content .work-prev{left: 20px;}
+.tab-content .work-next{right: 20px;}
+.tab-content ul li{background-color: rgba(0,0,0,.1);}
+.tab-content ul li .imgbox{position: relative; width: 100%; padding-bottom: 60%;}
+.tab-content ul li .imgbox img{width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover;}
+.tab-content ul li .textbox{padding: 20px; }
+.tab-content ul li .textbox h1{margin-bottom: 10px;}
+.tab-content ul li .textbox p{margin-bottom: 10px;}
+.tab-content ul li .textbox .skills{}
+.tab-content ul li .textbox .skills h3{margin-bottom: 10px;}
+.tab-content ul li .textbox .skills ul{display: flex; gap: 10px;}
+.tab-content ul li .textbox .skills ul li{height: 30px;}
+.tab-content ul li .textbox .skills ul li img{height: 100%;}
+.tab-content ul li .modal-view{display: none;}
+.modal{
+    position: fixed; background-color: rgba(0,0,0,.5); top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; width: 100%; height: 0; overflow: hidden; transition: 0.5s; z-index: 11;
+}
+.modal.active{height: 100%;}
+.modal-cont{width: 95%; max-width: 1600px; position: relative; transform: scale(0); transition: 0.5s;}
+.modal-cont.active{transform: scale(1);}
+.modal-view{display: flex;}
+.modal-view .player{position: relative; width: 70%;}
+.modal-view .player::after{padding-bottom: 56.25%; content: ""; display: block;}
+.modal-view .player iframe{position: absolute; width: 100%; height: 100%; border: none;}
+.modal-view .info{width: 30%; background-color:#fff; padding: 30px;}
+.modal-view .info h1{font-size: 30px;}
+.modal-view .info h2{font-size: 20px;}
+.modal-view .info h3{font-size: 20px;}
