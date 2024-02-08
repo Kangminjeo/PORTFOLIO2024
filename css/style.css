@@ -14,7 +14,7 @@
     align-items: center; 
 }
 .header .inner .logo{
-    height: 6rem;
+    height: 5rem;
 }
 .header .inner .logo a{
     display: block;
@@ -23,27 +23,97 @@
 .header .inner .logo a img{
     height: 100%;
 }
-.header .inner .logo a img:nth-child(1){display: block;}
+/* .header .inner .logo a img:nth-child(1){display: block;}
 .header .inner .logo a img:nth-child(2){display: none;}
 .header.active{
     color: #000;
 }
 .header.active .inner .logo a img:nth-child(1){display: none;}
-.header.active .inner .logo a img:nth-child(2){display: block;}
-.header ul{
+.header.active .inner .logo a img:nth-child(2){display: block;} */
+.header .header-menu{
     display: flex;
     justify-content: center;
     gap: 20px;
     font-size: 2rem;
 
 }
-.header ul li{}
-.header ul li.active{
+.header .header-menu li{}
+.header .header-menu li.active{
     border-bottom: 2px solid #ffffff;
 }
-@media screen and (max-width: 768px){
-    
+
+/* 모바일 메뉴버튼 부분 */
+.mo-menu-btn{
+    cursor: pointer;
+    z-index: 11;
+    display: none;
 }
+.mo-menu-btn .bar{
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+}
+.mo-menu-btn .bar:nth-child(2){
+    margin: 8px 0;
+}
+.mo-menu-btn.active .bar:nth-child(1){
+    transform: rotate(45deg);
+    top: 3px;
+}
+.mo-menu-btn.active .bar:nth-child(2){
+    display: none;
+}
+.mo-menu-btn.active .bar:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.side-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+    padding: 60px 0;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.side-menu.active{
+    right: 0;
+}
+.side-menu ul{}
+.side-menu ul li{
+    border-bottom: 1px solid #ccc;
+
+}
+.side-menu ul li a{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    align-items: center;
+}
+.side-menu ul li a i{
+    color: #d85252;
+}
+.side-menu ul li a i span{}
+/* 모바일 메뉴버튼 끝*/
+
+/* Header 반응형부분 */
+@media screen and (max-width: 1024px){
+    .header .inner .logo a img{height: 6rem;}
+}
+@media screen and (max-width: 768px){
+    .header .inner .logo a img{height: 5rem;}
+    .header .header-menu{display: none;}
+    .mo-menu-btn{display: block;}
+    }
+/* Header 반응형 끝*/
+/*Header 끝*/
+
+
 /* HOME 시작 */
 .home{
     display: flex;
@@ -81,9 +151,9 @@
 
 /* ABOUT 시작 */
 .about{
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 15rem 0;
-    color: #000000;
+    color: #ffffff;
 }
 .about .inner{
     display: flex;
@@ -121,7 +191,7 @@
 .about .about-right .about-btm .left h2{
     font-size: 2.2rem;
     font-family: "aria-text-g2", sans-serif;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
     padding: 1rem 0;
     margin-bottom: 2rem;
 }
@@ -148,7 +218,7 @@
 .about .about-right .about-btm .right .top h2{
     font-family: "aria-text-g2", sans-serif;
     font-size: 2.2rem;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
     padding: 1rem 0;
     margin-bottom: 2rem;
 }
@@ -189,7 +259,44 @@
     html{font-size: 8px;}
 }
 @media screen and (max-width: 768px){
+    .about {
+        padding: 0;
+    }
     .inner{padding: 0 20px;}
+    .about .inner{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    .about .about-left img{
+        width: 50rem;
+        
+    }
+    .about .about-right .about-text {
+        
+    }
+    .about .about-right .about-text p{
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+    .about .about-right .about-btm .left h2{
+        font-size: 1.8rem;
+        border-bottom: 1px solid #000000;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+    .about .about-right .about-btm .right .top h2{
+        font-size: 1.8rem;
+        border-bottom: 1px solid #000000;
+        padding: 1rem 0;
+        margin-bottom: 2rem;}
+    .about .about-right .about-btm .right .btm h2{
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        border-bottom: 1px solid #000000;
+        padding: 1rem 0;}
+
 }
 /* About 끝 */
 
@@ -356,7 +463,6 @@
 
 /* Comtact 시작 */
 .contact{
-    background-color: #000000;
     padding: 15rem 0;
 }
 .contact .inner{}
@@ -419,7 +525,7 @@
     width: 100%;
     height: 5rem;margin: 10px 0 20px;
     border: 2px solid #ccc;
-    border-radius: 20px;
+    border-radius: 9px;
     padding: 0 10px;
     resize: none;
     color: #000;
@@ -440,6 +546,8 @@
     border-radius: 9px;
     color: #fff;
     cursor: pointer;
+    text-align: center;
+    line-height: 4rem;
 }
 .mail-form .btn{
     width: 73%;
@@ -451,7 +559,7 @@
     cursor: pointer;
 }
 .success-mail{
-    border: 1px solid #F05A23;
+    border: 2px solid #ffffff;
     display: inline-block;
     padding: 4rem;
     text-align: center;
@@ -465,7 +573,7 @@
     display: inline-block;
     margin-top: 3rem;
     padding: 10px 20px;
-    border: 2px solid #8b1414;
+    border: 2px solid #ffffff;
     border-radius: 50px;
-    color: #8b1414;    
+    color: #ffffff;    
 }

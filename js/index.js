@@ -1,4 +1,30 @@
 window.onload = function(){
+
+    
+    //모바일 메뉴 버튼
+    let moMenuBtn = document.querySelector(".mo-menu-btn")
+    let sideMenu = document.querySelector(".side-menu")
+    let sideMenuList = document.querySelector(".side-menu ul")
+    moMenuBtn.addEventListener("click",function(){
+        sideMenu.classList.toggle("active")
+        this.classList.toggle("active")
+    })
+    sideMenuList.addEventListener("click",function(){
+        sideMenu.classList.toggle("active")
+        moMenuBtn.classList.toggle("active")
+    })
+    window.addEventListener("resize",function(){
+        let winWidth = window.innerWidth
+        if(winWidth > 768){
+            sideMenu.classList.remove("active")
+            moMenuBtn.classList.remove("active")
+        }
+
+    })
+    
+    
+    
+
     let header = document.querySelector(".header")
     window.addEventListener("scroll", function() {
         let scrollPosition = window.scrollY;
@@ -149,10 +175,10 @@ window.onload = function(){
                                 <h3>사용툴</h3>
                                 <ul class="skill-wrap">
                                     <li ${obj.afterEffect ? "style='display:block'" : "style='display:none'"}>
-                                        <img src="img/Adobe-After-Effects.png" alt="">
+                                        <img src="img/round_after_effects.png" alt="">
                                     </li>
                                     <li ${obj.premiere ? "style='display:block'" : "style='display:none'"}>
-                                        <img src="img/Adobe-Premiere-img.png" alt="">
+                                        <img src="img/round_premiere.png" alt="">
                                     </li>
                                     <li ${obj.css ? "style='display:block'" : "style='display:none'"}>
                                         <img src="img/CSS-img.png" alt="">
@@ -161,10 +187,10 @@ window.onload = function(){
                                         <img src="img/HTML-img.png" alt="">
                                     </li>
                                     <li ${obj.illust ? "style='display:block'" : "style='display:none'"}>
-                                        <img src="img/Adobe-Illustrator-img.png" alt="">
+                                        <img src="img/round_illust.png" alt="">
                                     </li>
                                     <li ${obj.photoshop ? "style='display:block'" : "style='display:none'"}>
-                                        <img src="img/Adobe-Photoshop-img.png" alt="">
+                                        <img src="img/round_photoshop.png" alt="">
                                     </li>
                                 </ul>
                             </div>
