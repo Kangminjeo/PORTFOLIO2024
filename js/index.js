@@ -1,5 +1,5 @@
 window.onload = function(){
-
+    AOS.init();
     
     //모바일 메뉴 버튼
     let moMenuBtn = document.querySelector(".mo-menu-btn")

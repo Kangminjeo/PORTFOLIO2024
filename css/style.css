@@ -56,7 +56,9 @@
 }
 .mo-menu-btn .bar:nth-child(2){
     margin: 8px 0;
+
 }
+.mo-menu-btn.active .bar{background-color: #000;}
 .mo-menu-btn.active .bar:nth-child(1){
     transform: rotate(45deg);
     top: 3px;
@@ -163,7 +165,7 @@
 }
 .about .about-left{
     font-size: 0;
-    width: 35%;
+    width: 33%;
 }
 .about .about-left img{
     width: 100%;
@@ -256,7 +258,7 @@
     
 }
 @media screen and (max-width: 1024px){
-    html{font-size: 8px;}
+    
 }
 @media screen and (max-width: 768px){
     .about {
@@ -267,36 +269,31 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        
     }
-    .about .about-left img{
-        width: 50rem;
-        
-    }
+    .about .about-left{width: 100%; max-width: 500px;}
+    .about .about-right{width: 100%; max-width: 500px;}
     .about .about-right .about-text {
-        
+        margin-bottom: 20px;
     }
     .about .about-right .about-text p{
-        font-size: 1.8rem;
+        font-size: 14px;
         line-height: 1.4;
     }
-    .about .about-right .about-btm .left h2{
-        font-size: 1.8rem;
+    .about .about-right .about-btm .left h2,
+    .about .about-right .about-btm .right .top h2,
+    .about .about-right .about-btm .right .btm h2{
+        font-size: 20px;
         border-bottom: 1px solid #000000;
         padding: 1rem 0;
         margin-bottom: 2rem;
     }
-    .about .about-right .about-btm .right .top h2{
-        font-size: 1.8rem;
-        border-bottom: 1px solid #000000;
-        padding: 1rem 0;
-        margin-bottom: 2rem;}
-    .about .about-right .about-btm .right .btm h2{
-        margin-bottom: 2rem;
-        font-size: 1.8rem;
-        border-bottom: 1px solid #000000;
-        padding: 1rem 0;}
+    
 
+}
+@media screen and (max-width: 500px){
+    .about .about-right .about-btm{flex-direction: column; gap: 30px;}
+    .about .about-right .about-btm .left,
+    .about .about-right .about-btm .right{width: 100%;}
 }
 /* About 끝 */
 
@@ -452,6 +449,7 @@
     background: #fff; 
     border-radius: 10px;}
 @media screen and (max-width: 768px){
+    .tab-list{margin-bottom: 50px;}
     .tab-content ul li{
         flex-direction: column;
     }
@@ -463,7 +461,7 @@
 
 /* Comtact 시작 */
 .contact{
-    padding: 15rem 0;
+    height: 100vh; display: flex; align-items: center; justify-content: center;
 }
 .contact .inner{}
 .contact .inner .text{

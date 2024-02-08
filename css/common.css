@@ -6,7 +6,10 @@
 a{text-decoration: none;}
 ul,ol{list-style: none;}
 html{font-size: 10px;}
-body{font-size: 1.6rem; color: #fff; background-color: #0c0c0c}
+body{font-size: 1.6rem; color: #fff; background-color: #0c0c0c;
+
+    overflow-x: hidden;
+}
 /* custom  */
 .inner{
     margin: 0 auto; padding: 0 40px; width: 100%; position: relative; font-family: "aria-text-g2", sans-serif;
